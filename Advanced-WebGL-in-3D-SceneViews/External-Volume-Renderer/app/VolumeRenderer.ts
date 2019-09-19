@@ -169,7 +169,7 @@ export class VolumeRenderer implements ExternalRenderer {
         if (this._updateColorMap) {
           this._updateColorMap = false;
           // selectColormap("http://localhost:8080/Advanced-WebGL-in-3D-SceneViews/External-Volume-Renderer/matplotlib-virdis.png", () => {
-          selectColormap("http://localhost:8080/Advanced-WebGL-in-3D-SceneViews/External-Volume-Renderer/matplotlib-plasma.png", () => {
+          selectColormap("./Advanced-WebGL-in-3D-SceneViews/External-Volume-Renderer/matplotlib-plasma.png", () => {
             this._updateLegend();
             requestRender(this._view);
           });
@@ -196,7 +196,7 @@ export class VolumeRenderer implements ExternalRenderer {
   // automatically by the Legend implementation.
   private _updateLegend(): void {
     const image = new Image();
-    esriRequest("http://localhost:8080/Advanced-WebGL-in-3D-SceneViews/External-Volume-Renderer/matplotlib-plasma.png", {
+    esriRequest("./Advanced-WebGL-in-3D-SceneViews/External-Volume-Renderer/matplotlib-plasma.png", {
       authMode: "anonymous",
       method: "get",
       responseType: "image"
