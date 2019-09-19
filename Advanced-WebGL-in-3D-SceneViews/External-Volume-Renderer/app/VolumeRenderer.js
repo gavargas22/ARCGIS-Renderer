@@ -105,7 +105,7 @@ define(["require", "exports", "esri/Color", "esri/renderers", "esri/request", "e
                 if (_this._updateColorMap) {
                     _this._updateColorMap = false;
                     // selectColormap("http://localhost:8080/Advanced-WebGL-in-3D-SceneViews/External-Volume-Renderer/matplotlib-virdis.png", () => {
-                    selectColormap("./Advanced-WebGL-in-3D-SceneViews/External-Volume-Renderer/matplotlib-plasma.png", function () {
+                    selectColormap("http://18.222.255.225/ARCGIS-Renderer/Advanced-WebGL-in-3D-SceneViews/External-Volume-Renderer/matplotlib-plasma.png", function () {
                         _this._updateLegend();
                         externalRenderers_1.requestRender(_this._view);
                     });
@@ -130,7 +130,7 @@ define(["require", "exports", "esri/Color", "esri/renderers", "esri/request", "e
         VolumeRenderer.prototype._updateLegend = function () {
             var _this = this;
             var image = new Image();
-            esriRequest("./Advanced-WebGL-in-3D-SceneViews/External-Volume-Renderer/matplotlib-plasma.png", {
+            esriRequest("http://18.222.255.225/ARCGIS-Renderer/Advanced-WebGL-in-3D-SceneViews/External-Volume-Renderer/matplotlib-plasma.png", {
                 authMode: "anonymous",
                 method: "get",
                 responseType: "image"
